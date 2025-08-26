@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddo8xk7kb577f"]
+
+[ext_resource type="Script" uid="uid://bvgnwf34qhjck" path="res://Assets/Scripts/health_pickup.gd" id="1_d63v4"]
+[ext_resource type="Texture2D" uid="uid://byu68cs0kqxep" path="res://Assets/Sprites/HealthPickup.png" id="1_rr3dk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d63v4"]
+
+[node name="HealthPickup" type="Area3D"]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_d63v4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_d63v4")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_rr3dk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

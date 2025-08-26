@@ -1,0 +1,252 @@
+[gd_scene load_steps=25 format=3 uid="uid://yd8lhwmqyvk8"]
+
+[ext_resource type="Script" uid="uid://cn0h3scv2m6vv" path="res://Assets/Scripts/EnemyStarCraft.gd" id="1_dko16"]
+[ext_resource type="ArrayMesh" uid="uid://ctb0iwodibggc" path="res://Assets/Models/new_starcraftaray.tres" id="3_6yk0x"]
+[ext_resource type="AudioStream" uid="uid://ecgldidw5161" path="res://Assets/Audio/SFX/SpaceshipLoopB.ogg" id="3_8ublq"]
+[ext_resource type="AudioStream" uid="uid://11k1grjqao5p" path="res://Assets/Audio/SFX/Destroy.wav" id="3_804l4"]
+[ext_resource type="AudioStream" uid="uid://cbqbms6steqqc" path="res://Assets/Audio/SFX/AxeSLAM.wav" id="4_pkhbv"]
+[ext_resource type="Texture2D" uid="uid://ch1lrh8l8q63s" path="res://Assets/Sprites/Characters/main/Clear.png" id="5_c3qsj"]
+[ext_resource type="AudioStream" uid="uid://bwkic3fxtm5ax" path="res://Assets/Audio/SFX/StarfighterAFire2.ogg" id="6_8ublq"]
+[ext_resource type="Texture2D" uid="uid://ccwvvhvbnq358" path="res://Assets/Sprites/FX/FireA 1.png" id="6_804l4"]
+[ext_resource type="Texture2D" uid="uid://b628nedw8rei1" path="res://Assets/Sprites/FX/FireA 2.png" id="7_pkhbv"]
+[ext_resource type="Texture2D" uid="uid://efn17h81re8e" path="res://Assets/Sprites/FX/FireA 3.png" id="8_8ublq"]
+[ext_resource type="Texture2D" uid="uid://dsd1pv4fvluvf" path="res://Assets/Sprites/FX/FireA 4.png" id="9_ljjww"]
+[ext_resource type="Texture2D" uid="uid://b5mnyqjgejnie" path="res://Assets/Sprites/FX/FireA 5.png" id="10_10mjj"]
+[ext_resource type="Texture2D" uid="uid://ccs5jjr02mfi6" path="res://Assets/Sprites/FX/FireA 6.png" id="11_pfbea"]
+[ext_resource type="Texture2D" uid="uid://cu5eo5rcx6k13" path="res://Assets/Sprites/FX/FireA 7.png" id="12_ngtun"]
+[ext_resource type="Texture2D" uid="uid://b81gm34347qca" path="res://Assets/Sprites/FX/FireA 8.png" id="13_ljqyb"]
+[ext_resource type="Texture2D" uid="uid://b4n2q2l3qyki0" path="res://Assets/Sprites/FX/FireA 9.png" id="14_hy7xl"]
+[ext_resource type="Texture2D" uid="uid://bk8763d368pev" path="res://Assets/Sprites/Textures/Crime Icon.png" id="17_8ublq"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ea2jw"]
+points = PackedVector3Array(0.342013, -0.131348, -0.142695, 0.357905, -0.131348, -0.142695, 0.310257, 0.0117095, -0.206301, 0.405609, -0.0359855, 0.0320656, 0.262566, -0.0677449, -0.222233, 0.278473, -0.0836526, 0.047967, 0.262566, 0.0117095, 0.07977, 0.342013, -0.0359855, -0.222233, 0.262566, -0.00421216, -0.222233, 0.310257, 0.0117095, 0.07977, 0.357905, -0.131348, -0.0791202, 0.389689, -0.0518932, 0.047967, 0.405609, -0.0359855, -0.0156077, 0.342013, -0.0836526, -0.222233, 0.310257, -0.0359855, 0.0956714, 0.262566, -0.0518932, 0.047967, 0.389689, -0.0201058, 0.000293761, 0.262566, 0.0117095, -0.174498, 0.310257, -0.0836526, 0.047967, 0.405609, -0.0518932, 0.0320656, 0.278473, -0.0359855, 0.0956714, 0.405609, -0.0518932, -0.0156077, 0.310257, -0.0201058, 0.0956714, 0.342013, -0.131348, -0.0791202, 0.310257, -0.0836526, -0.222233, 0.326149, -0.00421216, -0.206301, 0.326149, -0.0518932, 0.07977, 0.389689, -0.0201058, 0.0320656, 0.357905, -0.0359855, -0.174498, 0.389689, -0.0359855, 0.047967, 0.262566, -0.0201058, 0.07977, 0.278473, -0.0836526, -0.0156077)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_elc7a"]
+points = PackedVector3Array(0.135403, -0.0995571, -0.317564, 0.262552, 0.0117095, 0.0797358, 0.214859, 0.0117095, 0.0797358, 0.135403, 0.0117095, -0.317564, 0.262552, -0.00419194, -0.222193, 0.135403, -0.0359949, 0.03205, 0.246634, -0.0836557, -0.222193, 0.262552, -0.0359949, 0.03205, 0.135403, 0.0117095, 0.0479453, 0.151309, -0.0677651, -0.33346, 0.246634, -0.0836557, -0.253983, 0.16719, -0.0995571, -0.285774, 0.262552, 0.0117095, -0.0951119, 0.151309, -0.00419194, -0.33346, 0.214859, -0.0200825, 0.0797358, 0.262552, -0.0677651, -0.190402, 0.135403, -0.0518528, -0.0315309, 0.246634, -0.0200825, -0.253983, 0.214859, -0.0518528, -0.0315309, 0.151309, -0.0200825, 0.0638405, 0.16719, -0.0995571, -0.317564, 0.151309, 0.0117095, -0.317564, 0.262552, -0.0200825, 0.0797358, 0.135403, -0.0995571, -0.285774, 0.262552, -0.0518528, -0.0474262, 0.151309, 0.0117095, 0.0638405)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rukpd"]
+points = PackedVector3Array(-0.118933, -0.0200716, 0.254513, 0.13539, 0.0116877, 0.0480168, 0.13539, -0.0200716, 0.0480168, 0.0240865, 0.0434751, 0.508948, -0.00762933, 0.0752905, -0.110967, -0.118933, -0.051845, -0.110967, 0.0240865, -0.051845, 0.397659, 0.13539, -0.051845, -0.110967, -0.118933, 0.0116877, 0.254513, -0.0394198, 0.0434751, 0.493049, -0.118933, 0.0116877, -0.110967, 0.119458, -0.0200716, 0.254513, 0.0399693, 0.0593688, 0.429456, -0.0394198, -0.051845, 0.381761, 0.13539, 0.0116877, -0.110967, -0.0394198, 0.0593688, 0.429456, -0.0394198, -0.00416393, 0.493049, 0.0399693, -0.00416393, 0.493049, -0.0320824, -0.0567519, 0.299815, 0.119458, 0.0116877, 0.254513, -0.103001, 0.0275954, 0.0639152, 0.00822857, 0.0752905, -0.110967, 0.13539, -0.051845, -0.0155766, -0.118933, -0.051845, -0.0155766, 0.0399693, -0.051845, 0.381761, -0.0235619, -0.0359513, 0.445354, -0.0235619, 0.0593688, 0.461253, 0.0399693, 0.0275954, 0.493049, 0.0240865, -0.0200716, 0.477151, 0.0341706, -0.0546993, 0.296395, 0.0399693, -0.0359513, 0.429456, 0.0240865, 0.0593688, 0.461253)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n562q"]
+points = PackedVector3Array(-0.103001, -0.0518543, -0.508348, 0.13539, 0.0116971, -0.110967, 0.094385, 0.111514, -0.245037, -0.118933, 0.0116971, -0.110967, 0.13539, -0.0995354, -0.317553, -0.0712103, -0.0995354, -0.158656, -0.103001, 0.122976, -0.317553, 0.10355, -0.00414993, -0.508348, -0.00762933, 0.0752718, -0.110967, -0.118933, -0.0995354, -0.317553, 0.13539, -0.0518543, -0.110967, 0.10355, 0.122976, -0.317553, -0.103001, 0.0116971, -0.492438, 0.0718095, -0.115452, -0.333424, 0.10355, -0.0518543, -0.508348, 0.0718095, -0.115452, -0.206344, 0.13539, 0.0116971, -0.317553, -0.118933, -0.0518543, -0.110967, -0.118933, -0.0200436, -0.492438, -0.0921729, 0.111371, -0.245123, 0.119458, -0.0200436, -0.492438, 0.10355, 0.0434844, -0.44475, 0.0718095, -0.0995354, -0.158656, -0.103001, -0.00414993, -0.508348, 0.00822857, 0.0752718, -0.110967, -0.118933, 0.0116971, -0.333424, -0.118933, -0.0995354, -0.285891, 0.13539, -0.0995354, -0.285891, 0.13539, -0.0200436, -0.349372, 0.10355, 0.0116971, -0.492438, 0.119458, -0.0359373, -0.492438, -0.087118, 0.0434844, -0.44475)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q4mn1"]
+points = PackedVector3Array(-0.24607, -0.0836557, -0.253958, -0.118961, 0.0117095, 0.0479359, -0.150746, 0.0117095, 0.063814, -0.150746, 0.0117095, -0.333433, -0.118961, -0.0995571, -0.285757, -0.261976, -0.0200825, 0.0797342, -0.261976, 0.0117095, -0.0951352, -0.118961, -0.0518528, -0.0156606, -0.118961, 0.0117095, -0.333433, -0.261976, -0.00419194, -0.222202, -0.261976, -0.0518528, -0.0474168, -0.166638, -0.0677651, -0.333433, -0.261976, 0.0117095, 0.0797342, -0.150746, -0.0200825, 0.063814, -0.118961, -0.0995571, -0.317555, -0.150746, -0.0200825, -0.349395, -0.166638, -0.0995571, -0.285757, -0.18253, -0.0518528, -0.0156606, -0.261976, -0.0677651, -0.190404, -0.166638, -0.0995571, -0.317555, -0.118961, -0.0359949, -0.349395, -0.118961, -0.0359949, 0.0320158, -0.24607, -0.0836557, -0.222202, -0.24607, -0.0518528, -0.0315387, -0.214286, -0.0200825, 0.0797342, -0.261976, -0.0359949, 0.0320158, -0.214286, 0.0117095, 0.0797342, -0.118961, -0.0200825, 0.0479359)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5vqbf"]
+points = PackedVector3Array(-0.357343, -0.131348, -0.142695, -0.341451, -0.131348, -0.142695, -0.309695, 0.0117095, -0.206301, -0.405048, -0.0359855, 0.0320656, -0.262004, -0.0677449, -0.222233, -0.277911, -0.0836526, 0.047967, -0.262004, 0.0117095, 0.07977, -0.357343, -0.0518932, -0.206301, -0.262004, 0.0117095, -0.174498, -0.309695, 0.0117095, 0.07977, -0.357343, -0.131348, -0.0791202, -0.389127, -0.0518932, 0.047967, -0.341451, -0.0836526, -0.222233, -0.405048, -0.0359855, -0.0156077, -0.309695, -0.0359855, 0.0956714, -0.389127, -0.0201058, 0.047967, -0.262004, -0.0518932, 0.047967, -0.262004, -0.00421216, -0.222233, -0.309695, -0.0836526, 0.047967, -0.405048, -0.0518932, -0.0156077, -0.277911, -0.0359855, 0.0956714, -0.341451, -0.0359855, -0.222233, -0.405048, -0.0518932, 0.0320656, -0.357343, -0.0677449, -0.206301, -0.341451, -0.131348, -0.0791202, -0.389127, -0.0201058, -0.0156077, -0.309695, -0.0836526, -0.222233, -0.309695, -0.0201058, 0.0956714, -0.325587, -0.00421216, -0.206301, -0.325587, -0.0518932, 0.07977, -0.262004, -0.0201058, 0.07977, -0.325587, -0.0201058, -0.222233)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r5qc2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_c3qsj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_804l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pkhbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8ublq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ljjww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_10mjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pfbea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ngtun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ljqyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hy7xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c3qsj")
+}],
+"loop": false,
+"name": &"fire",
+"speed": 16.0
+}]
+
+[node name="EnemyStarCraft" type="CharacterBody3D" node_paths=PackedStringArray("rays")]
+transform = Transform3D(1.6, 0, 2.79754e-07, 0, 1.6, 0, -2.79754e-07, 0, 1.6, 0, 0, 0)
+collision_layer = 8
+script = ExtResource("1_dko16")
+rays = [NodePath("Rays/RayCast3D"), NodePath("Rays/RayCast3D2"), NodePath("Rays/RayCast3D3"), NodePath("Rays/RayCast3D4"), NodePath("Rays/RayCast3D5"), NodePath("Rays/RayCast3D6"), NodePath("Rays/RayCast3D7"), NodePath("Rays/RayCast3D8"), NodePath("Rays/RayCast3D9"), NodePath("Rays/RayCast3D10"), NodePath("Rays/RayCast3D11"), NodePath("Rays/RayCast3D12"), NodePath("Rays/RayCast3D13")]
+
+[node name="MESH" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 3.17862e-07, 0, 10, 0, -3.17862e-07, 0, 10, 0, 0, 0)
+mesh = ExtResource("3_6yk0x")
+skeleton = NodePath("")
+
+[node name="shipEngine" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_8ublq")
+pitch_scale = 0.01
+autoplay = true
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="Destroy" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_pkhbv")
+unit_size = 50.0
+pitch_scale = 0.9
+autoplay = true
+max_distance = 600.0
+bus = &"SFX"
+
+[node name="hit" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_804l4")
+unit_size = 20.0
+pitch_scale = 0.6
+autoplay = true
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="FirePorts" type="Node3D" parent="."]
+
+[node name="LeftPort" type="AudioStreamPlayer3D" parent="FirePorts"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0.1, -0.15)
+stream = ExtResource("6_8ublq")
+pitch_scale = 1.25
+max_distance = 80.0
+
+[node name="RightPort" type="AudioStreamPlayer3D" parent="FirePorts"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0.1, -0.15)
+stream = ExtResource("6_8ublq")
+pitch_scale = 1.25
+max_distance = 80.0
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 3.17862e-07, 0, 10, 0, -3.17862e-07, 0, 10, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ea2jw")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 3.17862e-07, 0, 10, 0, -3.17862e-07, 0, 10, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_elc7a")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 3.17862e-07, 0, 10, 0, -3.17862e-07, 0, 10, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_rukpd")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 3.17862e-07, 0, 10, 0, -3.17862e-07, 0, 10, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_n562q")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 3.17862e-07, 0, 10, 0, -3.17862e-07, 0, 10, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_q4mn1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 3.17862e-07, 0, 10, 0, -3.17862e-07, 0, 10, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_5vqbf")
+
+[node name="ImpactSprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09815e-07, 0, 1.2)
+pixel_size = 0.1
+sprite_frames = SubResource("SpriteFrames_r5qc2")
+animation = &"fire"
+frame = 9
+frame_progress = 1.0
+
+[node name="Rays" type="Node3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="Rays"]
+transform = Transform3D(1, 1.52388e-08, 6.65338e-10, -1.52388e-08, 0.996195, 0.0871557, 6.65338e-10, -0.0871557, 0.996195, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D2" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.996195, 1.52388e-08, 0.0871557, -0.00759613, 0.996195, 0.0868241, -0.086824, -0.0871557, 0.992404, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D3" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.996195, 1.52388e-08, -0.0871558, 0.00759611, 0.996195, 0.0868241, 0.0868241, -0.0871557, 0.992404, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D4" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.984808, 1.52388e-08, -0.173648, 0.0151344, 0.996195, 0.0858317, 0.172987, -0.0871557, 0.981061, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D5" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.984808, 1.52388e-08, 0.173648, -0.0151344, 0.996195, 0.0858317, -0.172987, -0.0871557, 0.981061, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D6" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.965926, 1.52388e-08, 0.258819, -0.0225576, 0.996195, 0.084186, -0.257834, -0.0871557, 0.96225, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D7" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.965926, 1.52388e-08, -0.258819, 0.0225575, 0.996195, 0.084186, 0.257834, -0.0871557, 0.96225, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D8" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.906308, 1.52388e-08, 0.422618, -0.0368336, 0.996195, 0.0789899, -0.42101, -0.0871557, 0.902859, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D9" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.939693, 1.52388e-08, -0.34202, 0.029809, 0.996195, 0.0818996, 0.340719, -0.0871557, 0.936117, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D10" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.939693, 1.52388e-08, 0.34202, -0.029809, 0.996195, 0.0818996, -0.340719, -0.0871557, 0.936117, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D11" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.906308, 1.52388e-08, -0.422618, 0.0368336, 0.996195, 0.0789899, 0.42101, -0.0871557, 0.902859, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D12" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.866025, 1.52388e-08, -0.5, 0.0435779, 0.996195, 0.0754791, 0.498097, -0.0871557, 0.862729, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="RayCast3D13" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.866025, 1.52388e-08, 0.5, -0.0435779, 0.996195, 0.075479, -0.498097, -0.0871557, 0.86273, -4.54153e-16, -0.368137, 2.59744e-09)
+target_position = Vector3(0, 0, 160)
+hit_from_inside = true
+debug_shape_thickness = 5
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+visibility_range_begin = 50.0
+visibility_range_begin_margin = 15.0
+visibility_range_end = 200.0
+pixel_size = 0.0013
+billboard = 1
+fixed_size = true
+texture = ExtResource("17_8ublq")

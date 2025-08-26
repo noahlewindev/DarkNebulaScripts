@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cb7ggu1enklfp"]
+
+[ext_resource type="Texture2D" uid="uid://bhugxxxcgalcn" path="res://Assets/Models/StarfighterA_c2df1794e13ce1200b1658281293b51b.png" id="1_pm7x5"]
+
+[resource]
+resource_name = "material_0"
+shading_mode = 0
+albedo_texture = ExtResource("1_pm7x5")
+texture_filter = 2

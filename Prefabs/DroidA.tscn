@@ -1,0 +1,536 @@
+[gd_scene load_steps=36 format=3 uid="uid://hatrcmkpjsg4"]
+
+[ext_resource type="Script" uid="uid://b2ckewf67j7mo" path="res://Assets/Scripts/EnemyAIShooter.gd" id="1_5jh2v"]
+[ext_resource type="Texture2D" uid="uid://dt856rqkswcq6" path="res://Assets/Sprites/Characters/Enemies/DroidA/DroidA Dead.png" id="1_i1ae0"]
+[ext_resource type="Texture2D" uid="uid://br0ikmprg4me" path="res://Assets/Sprites/Characters/Enemies/DroidA/DroidA Idle 2.png" id="2_5jh2v"]
+[ext_resource type="Texture2D" uid="uid://yq6xcvhd3apu" path="res://Assets/Sprites/Characters/Enemies/DroidA/DroidA Idle 1.png" id="3_o50mj"]
+[ext_resource type="Texture2D" uid="uid://coq50g5ygm3ic" path="res://Assets/Sprites/Characters/Enemies/DroidA/DroidA Shoot 1.png" id="4_ow68u"]
+[ext_resource type="Texture2D" uid="uid://b6sieibp3klx7" path="res://Assets/Sprites/Characters/Enemies/DroidA/DroidA Shoot 2.png" id="5_316hs"]
+[ext_resource type="Texture2D" uid="uid://em7es3yee7at" path="res://Assets/Sprites/Characters/Enemies/DroidA/DroidA Move 4.png" id="6_c1yuv"]
+[ext_resource type="Texture2D" uid="uid://b0ebojmik5kd" path="res://Assets/Sprites/Characters/Enemies/DroidA/DroidA Move 3.png" id="7_ncxpf"]
+[ext_resource type="Texture2D" uid="uid://chg05m5laiduj" path="res://Assets/Sprites/Characters/Enemies/DroidA/DroidA Move 2.png" id="8_vfbo3"]
+[ext_resource type="Texture2D" uid="uid://co0hjte02mf6t" path="res://Assets/Sprites/Characters/Enemies/DroidA/DroidA Move 1.png" id="9_u33ym"]
+[ext_resource type="Texture2D" uid="uid://bil2ggduwsyoc" path="res://Assets/Sprites/FX/FireB 1.png" id="11_86kw1"]
+[ext_resource type="Texture2D" uid="uid://u640pbkli228" path="res://Assets/Sprites/FX/Slam Effect 6.png" id="11_pms7u"]
+[ext_resource type="Texture2D" uid="uid://bwchn1gdmc6xd" path="res://Assets/Sprites/FX/Slam Effect 7.png" id="12_pcbm7"]
+[ext_resource type="Texture2D" uid="uid://dahjbaw72vy4m" path="res://Assets/Sprites/FX/FireB 2.png" id="12_x1lso"]
+[ext_resource type="Texture2D" uid="uid://bhctbeuf6qe67" path="res://Assets/Sprites/FX/FireB 3.png" id="13_c6tr8"]
+[ext_resource type="Texture2D" uid="uid://rt0m3gb4uafu" path="res://Assets/Sprites/FX/Slam Effect 8.png" id="13_ryebw"]
+[ext_resource type="Texture2D" uid="uid://dr2n7cpxcae66" path="res://Assets/Sprites/FX/Slam Effect 9.png" id="14_88nou"]
+[ext_resource type="Texture2D" uid="uid://dp5p52qo0gbgj" path="res://Assets/Sprites/FX/FireB 4.png" id="14_u2bsp"]
+[ext_resource type="Texture2D" uid="uid://23u44b0nklmu" path="res://Assets/Sprites/FX/FireB 5.png" id="15_1davu"]
+[ext_resource type="Texture2D" uid="uid://drs5vs5h7flf7" path="res://Assets/Sprites/FX/Slam Effect 10.png" id="15_terpj"]
+[ext_resource type="Texture2D" uid="uid://07yegcj8tvjx" path="res://Assets/Sprites/FX/FireB 6.png" id="16_4jlv4"]
+[ext_resource type="Texture2D" uid="uid://csp24y1yslfrl" path="res://Assets/Sprites/FX/Slam Effect 11.png" id="16_55c2g"]
+[ext_resource type="Texture2D" uid="uid://bwbmp10xecc2l" path="res://Assets/Sprites/FX/FireB 7.png" id="17_cxt8a"]
+[ext_resource type="Texture2D" uid="uid://7jbltrq3g28b" path="res://Assets/Sprites/FX/Slam Effect 12.png" id="17_ujhf3"]
+[ext_resource type="Texture2D" uid="uid://bkaif78m0s2tp" path="res://Assets/Sprites/FX/FireB 8.png" id="18_1ebne"]
+[ext_resource type="Texture2D" uid="uid://ch1lrh8l8q63s" path="res://Assets/Sprites/Characters/main/Clear.png" id="18_da1dn"]
+[ext_resource type="AudioStream" uid="uid://b0ep3t0w8njf" path="res://Assets/Audio/VO/B1 Destroy 1.ogg" id="27_c6tr8"]
+[ext_resource type="AudioStream" uid="uid://dpo7tugywxjjh" path="res://Assets/Audio/VO/B1 Destroy 2.ogg" id="28_u2bsp"]
+[ext_resource type="AudioStream" uid="uid://b46wlgsi4rcxt" path="res://Assets/Audio/VO/B1 Taunt 1.ogg" id="29_1davu"]
+[ext_resource type="AudioStream" uid="uid://11k1grjqao5p" path="res://Assets/Audio/SFX/Destroy.wav" id="29_cxt8a"]
+[ext_resource type="AudioStream" uid="uid://dtg1f3vx67gsy" path="res://Assets/Audio/VO/B1 Taunt 2.ogg" id="30_4jlv4"]
+[ext_resource type="AudioStream" uid="uid://cxpe3htryxquq" path="res://Assets/Audio/SFX/B1BlasterFire.ogg" id="31_4jlv4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_64e7q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pms7u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i1ae0")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5jh2v")
+}],
+"loop": true,
+"name": &"idle_agro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_o50mj")
+}],
+"loop": true,
+"name": &"idle_unalert",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5jh2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ow68u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_316hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ow68u")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_c1yuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ncxpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vfbo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u33ym")
+}],
+"loop": true,
+"name": &"walk_backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_u33ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vfbo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ncxpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c1yuv")
+}],
+"loop": true,
+"name": &"walk_forward",
+"speed": 4.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_86kw1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_86kw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x1lso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_c6tr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_u2bsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1davu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4jlv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cxt8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1ebne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_da1dn")
+}],
+"loop": false,
+"name": &"destroy",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_da1dn")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_pms7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pcbm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ryebw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_88nou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_terpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_55c2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ujhf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_da1dn")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 18.0
+}]
+
+[node name="DroidA" type="CharacterBody3D" node_paths=PackedStringArray("rays")]
+collision_layer = 8
+collision_mask = 7
+script = ExtResource("1_5jh2v")
+tooFarRange = 9
+rays = [NodePath("Rays/r2"), NodePath("Rays/r4"), NodePath("Rays/r6"), NodePath("Rays/r8"), NodePath("Rays/r10"), NodePath("Rays/r12"), NodePath("Rays/r14"), NodePath("Rays/r16"), NodePath("Rays/r18"), NodePath("Rays/r20"), NodePath("Rays/r22"), NodePath("Rays/r24"), NodePath("Rays/r26"), NodePath("Rays/r28"), NodePath("Rays/r30"), NodePath("Rays/r32"), NodePath("Rays/r34"), NodePath("Rays/r36"), NodePath("Rays/r38"), NodePath("Rays/r40"), NodePath("Rays/r42"), NodePath("Rays/r44"), NodePath("Rays/r46"), NodePath("Rays/r48"), NodePath("Rays/r50"), NodePath("Rays/r52"), NodePath("Rays/r54"), NodePath("Rays/r56"), NodePath("Rays/r58"), NodePath("Rays/r60"), NodePath("Rays/r62"), NodePath("Rays/r64"), NodePath("Rays/r66"), NodePath("Rays/r68"), NodePath("Rays/r70"), NodePath("Rays/r72"), NodePath("Rays/r74"), NodePath("Rays/r76"), NodePath("Rays/r78"), NodePath("Rays/r80")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_64e7q")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20933, 0)
+billboard = 2
+alpha_cut = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_pms7u")
+animation = &"idle_unalert"
+autoplay = "idle_unalert"
+
+[node name="impactSprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20933, 0)
+pixel_size = 0.025
+billboard = 1
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_86kw1")
+animation = &"destroy"
+autoplay = "empty"
+
+[node name="Rays" type="Node3D" parent="."]
+
+[node name="r2" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.996195, 0, 0.0871557, 0, 1, 0, -0.0871557, 0, 0.996195, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r4" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r6" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.906308, 0, 0.422618, 0, 1, 0, -0.422618, 0, 0.906308, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r8" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.819152, 0, 0.573576, 0, 1, 0, -0.573576, 0, 0.819152, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r10" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.727175, -0.0451469, 0.684966, 0.0009454, 0.9979, 0.0647691, -0.686452, -0.0464509, 0.72569, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r12" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.596926, -0.0525272, 0.800575, 0.000945405, 0.9979, 0.0647691, -0.802296, -0.0379055, 0.595722, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r14" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.448541, -0.0583114, 0.891859, 0.000945411, 0.9979, 0.0647691, -0.893762, -0.0282084, 0.447654, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r16" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.286526, -0.0623238, 0.956043, 0.000945414, 0.9979, 0.0647691, -0.958072, -0.0176542, 0.285983, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r18" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.115806, -0.0644426, 0.991179, 0.000945415, 0.9979, 0.0647691, -0.993272, -0.00656357, 0.115623, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r20" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.0356145, -0.123325, 0.991727, 0.000722177, 0.992353, 0.123429, -0.999366, 0.00511202, -0.0352532, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r22" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.0871558, 0, 0.996195, 0, 1, 0, -0.996195, 0, -0.0871558, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r24" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r26" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.422618, 0, 0.906308, 0, 1, 0, -0.906308, 0, -0.422618, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r28" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.573576, 0, 0.819152, 0, 1, 0, -0.819152, 0, -0.573576, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r30" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.686452, -0.0464509, 0.72569, 0.000945403, 0.9979, 0.0647691, -0.727175, 0.0451469, -0.684966, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r32" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.802296, -0.0379055, 0.595722, 0.000945408, 0.9979, 0.0647691, -0.596926, 0.0525272, -0.800575, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r34" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.893762, -0.0282084, 0.447654, 0.000945411, 0.9979, 0.0647691, -0.448541, 0.0583114, -0.891859, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r36" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.958072, -0.0176542, 0.285983, 0.000945415, 0.9979, 0.0647691, -0.286526, 0.0623238, -0.956044, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r38" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.993272, -0.00656356, 0.115623, 0.000945415, 0.9979, 0.0647691, -0.115806, 0.0644426, -0.991179, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r40" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.999366, 0.00511201, -0.0352532, 0.000722177, 0.992353, 0.123429, 0.0356145, 0.123325, -0.991727, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r42" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.996195, 0, -0.0871558, 0, 1, 0, 0.0871558, 0, -0.996195, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r44" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r46" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.906308, 0, -0.422618, 0, 1, 0, 0.422618, 0, -0.906308, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r48" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.819152, 0, -0.573576, 0, 1, 0, 0.573576, 0, -0.819152, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r50" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.727175, 0.0451469, -0.684966, 0.000945406, 0.9979, 0.0647691, 0.686452, 0.0464509, -0.72569, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r52" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.596926, 0.0525272, -0.800575, 0.000945407, 0.9979, 0.0647691, 0.802296, 0.0379055, -0.595722, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r54" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.448541, 0.0583114, -0.891859, 0.000945411, 0.9979, 0.0647691, 0.893762, 0.0282084, -0.447654, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r56" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.286526, 0.0623238, -0.956044, 0.000945415, 0.9979, 0.0647691, 0.958072, 0.0176542, -0.285983, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r58" type="RayCast3D" parent="Rays"]
+transform = Transform3D(-0.115806, 0.0644426, -0.99118, 0.000945416, 0.9979, 0.0647691, 0.993272, 0.00656356, -0.115623, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r60" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.0356146, 0.123325, -0.991727, 0.000722177, 0.992353, 0.123429, 0.999366, -0.00511201, 0.0352532, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r62" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.0871559, 0, -0.996195, 0, 1, 0, 0.996195, 0, 0.0871559, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r64" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r66" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.422618, 0, -0.906308, 0, 1, 0, 0.906308, 0, 0.422618, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r68" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.573576, 0, -0.819152, 0, 1, 0, 0.819152, 0, 0.573576, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r70" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.686452, 0.0464509, -0.72569, 0.000945409, 0.9979, 0.0647691, 0.727175, -0.0451469, 0.684966, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r72" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.802296, 0.0379055, -0.595722, 0.000945409, 0.9979, 0.0647691, 0.596926, -0.0525272, 0.800575, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r74" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.893762, 0.0282084, -0.447654, 0.000945411, 0.9979, 0.0647691, 0.448541, -0.0583114, 0.891859, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r76" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.958072, 0.0176542, -0.285983, 0.000945414, 0.9979, 0.0647691, 0.286526, -0.0623239, 0.956044, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r78" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.993272, 0.00656357, -0.115623, 0.000945416, 0.9979, 0.0647691, 0.115806, -0.0644426, 0.99118, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="r80" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.999366, -0.005112, 0.0352533, 0.000722176, 0.992353, 0.123429, -0.0356146, -0.123325, 0.991727, 0, 0.685066, 0)
+target_position = Vector3(30, 0, 0)
+collision_mask = 3
+hit_from_inside = true
+debug_shape_custom_color = Color(0.364706, 0.552941, 0.34902, 1)
+
+[node name="FirePos" type="Node3D" parent="."]
+
+[node name="Audio" type="Node3D" parent="."]
+
+[node name="Hurt1" type="AudioStreamPlayer3D" parent="Audio"]
+stream = ExtResource("27_c6tr8")
+unit_size = 2.0
+max_distance = 150.0
+bus = &"VO"
+
+[node name="Hurt2" type="AudioStreamPlayer3D" parent="Audio"]
+stream = ExtResource("28_u2bsp")
+unit_size = 5.0
+max_distance = 150.0
+bus = &"VO"
+
+[node name="Destroy" type="AudioStreamPlayer3D" parent="Audio"]
+stream = ExtResource("29_cxt8a")
+unit_size = 5.0
+max_distance = 150.0
+bus = &"SFX"
+
+[node name="Taunt1" type="AudioStreamPlayer3D" parent="Audio"]
+stream = ExtResource("29_1davu")
+unit_size = 9.0
+max_distance = 80.0
+bus = &"VO"
+
+[node name="Taunt2" type="AudioStreamPlayer3D" parent="Audio"]
+stream = ExtResource("30_4jlv4")
+unit_size = 9.0
+max_distance = 80.0
+bus = &"VO"
+
+[node name="BlasterFire" type="AudioStreamPlayer3D" parent="Audio"]
+stream = ExtResource("31_4jlv4")
+unit_size = 7.0
+max_distance = 150.0
+bus = &"SFX"

@@ -1,0 +1,1258 @@
+[gd_scene load_steps=154 format=3 uid="uid://cjkhdrx1s3xfe"]
+
+[ext_resource type="Texture2D" uid="uid://5gepd8psvh3n" path="res://Assets/Sprites/Characters/main/Vix Aim.png" id="1_b60ru"]
+[ext_resource type="Script" uid="uid://ctp77bhpvvbwl" path="res://Assets/Scripts/Player.gd" id="1_gyb0l"]
+[ext_resource type="Texture2D" uid="uid://njbqlfmy6enl" path="res://Assets/Sprites/Characters/main/Vix Walk 1.png" id="3_08dxu"]
+[ext_resource type="Texture2D" uid="uid://bapt8gwipbp70" path="res://Assets/Sprites/Characters/main/Vix Walk 2.png" id="4_wjqlt"]
+[ext_resource type="Texture2D" uid="uid://bsek6nx1g4x3r" path="res://Assets/Sprites/Characters/main/Vix Walk 3.png" id="5_yguvd"]
+[ext_resource type="Texture2D" uid="uid://bgcqj6a2gxiie" path="res://Assets/Sprites/Characters/main/Vix Walk 4.png" id="6_s3rgb"]
+[ext_resource type="Texture2D" uid="uid://c22m2muyt13t" path="res://Assets/Sprites/Characters/main/Vix Block 1.png" id="7_eh2gh"]
+[ext_resource type="Texture2D" uid="uid://j1jlsqlyfvlv" path="res://Assets/Sprites/Characters/main/Vix Dodge 1.png" id="7_g0mwx"]
+[ext_resource type="Texture2D" uid="uid://cxtw8f4c5uxhd" path="res://Assets/Sprites/Characters/main/Vix Rocket Aim.png" id="7_lfwng"]
+[ext_resource type="Texture2D" uid="uid://dhvqxv17sa4x" path="res://Assets/Sprites/Characters/main/Vix Jump 3.png" id="7_n1vdr"]
+[ext_resource type="Texture2D" uid="uid://du78mqttgpihy" path="res://Assets/Sprites/Characters/main/Vix Hover.png" id="8_0d33m"]
+[ext_resource type="Texture2D" uid="uid://drwtw8lo03au3" path="res://Assets/Sprites/Characters/main/Vix Jump 2.png" id="8_4m6bv"]
+[ext_resource type="Texture2D" uid="uid://mk384oralupr" path="res://Assets/Sprites/Characters/main/Vix Block Walk 1.png" id="8_fucp3"]
+[ext_resource type="Texture2D" uid="uid://qrxt2aoahkx1" path="res://Assets/Sprites/Characters/main/Vix Dodge 2.png" id="8_n2jod"]
+[ext_resource type="Texture2D" uid="uid://lmr4hir23drb" path="res://Assets/Sprites/Characters/main/Vix Jump 1.png" id="8_w147y"]
+[ext_resource type="Texture2D" uid="uid://1grfmkmnwpxy" path="res://Assets/Sprites/Characters/main/Vix Rocket 1.png" id="9_0i2kt"]
+[ext_resource type="Texture2D" uid="uid://ijnob801ms4w" path="res://Assets/Sprites/Characters/main/Vix Block Walk 2.png" id="9_64a58"]
+[ext_resource type="Texture2D" uid="uid://bi3lrmfyum10a" path="res://Assets/Sprites/Characters/main/Vix ALT.png" id="9_ceerx"]
+[ext_resource type="Texture2D" uid="uid://ccsia52mgw401" path="res://Assets/Sprites/Characters/main/Vix Block Walk 3.png" id="10_5dnc3"]
+[ext_resource type="Texture2D" uid="uid://ifmkptwvlg7o" path="res://Assets/Sprites/Characters/main/Vix Jump 1 alt.png" id="10_o57oj"]
+[ext_resource type="Texture2D" uid="uid://dxbs7huelfrdv" path="res://Assets/Sprites/Characters/main/FX/JetFlameA 1.png" id="11_782qs"]
+[ext_resource type="Texture2D" uid="uid://bsrgfqdbmwyb7" path="res://Assets/Sprites/Characters/main/FX/Blank.png" id="11_j8vfr"]
+[ext_resource type="Texture2D" uid="uid://dgu3kecg6antb" path="res://Assets/Sprites/Characters/main/Vix Block Walk 4.png" id="11_tm1w5"]
+[ext_resource type="Texture2D" uid="uid://4svcj0j1flx2" path="res://Assets/Sprites/Characters/main/Vix Boost 1.png" id="12_ixmbx"]
+[ext_resource type="Texture2D" uid="uid://c5pyquts4wrb4" path="res://Assets/Sprites/Characters/main/FX/JetFlameA 2.png" id="12_j8vfr"]
+[ext_resource type="Texture2D" uid="uid://huft2xdn4hnq" path="res://Assets/Sprites/Characters/main/FX/JetFlameA 3.png" id="13_ae12f"]
+[ext_resource type="Texture2D" uid="uid://dbryarg0ng7m5" path="res://Assets/Sprites/Characters/main/Vix Rocket Aim alt.png" id="13_ceerx"]
+[ext_resource type="Texture2D" uid="uid://xo4yn5px1cyr" path="res://Assets/Sprites/Characters/main/Vix Boost 2.png" id="13_hitn5"]
+[ext_resource type="Texture2D" uid="uid://pl2lw42xvilp" path="res://Assets/Sprites/Characters/main/Vix Swing 15.png" id="14_k3y5a"]
+[ext_resource type="Texture2D" uid="uid://cbruwmt773wes" path="res://Assets/Sprites/Characters/main/FX/JetFlameA 4.png" id="14_rw2bb"]
+[ext_resource type="Texture2D" uid="uid://deuyxnqlvp8si" path="res://Assets/Sprites/Characters/main/Vix Boost 3.png" id="14_ut1ru"]
+[ext_resource type="Texture2D" uid="uid://0asv2ow75pym" path="res://Assets/Sprites/Characters/main/FX/JetFlameA 5.png" id="15_3wbp6"]
+[ext_resource type="Texture2D" uid="uid://corv5gha4utas" path="res://Assets/Sprites/Characters/main/Vix Swing 15 alt.png" id="15_i4don"]
+[ext_resource type="Texture2D" uid="uid://cqf538sbrxluq" path="res://Assets/Sprites/Characters/main/Vix Hover alt.png" id="15_oo7x4"]
+[ext_resource type="Texture2D" uid="uid://c6odsmwxxu726" path="res://Assets/Sprites/Characters/main/Vix Boost 4.png" id="15_yalru"]
+[ext_resource type="Texture2D" uid="uid://cxy83ul52oh5i" path="res://Assets/Sprites/Characters/main/FX/JetFlameA 6.png" id="16_b6acd"]
+[ext_resource type="Texture2D" uid="uid://r3exgafk4ox5" path="res://Assets/Sprites/Characters/main/Vix Death 1.png" id="16_o2cw2"]
+[ext_resource type="Texture2D" uid="uid://cy6uo7kcg0h0x" path="res://Assets/Sprites/Characters/main/Vix Death 2.png" id="17_3b0uk"]
+[ext_resource type="Texture2D" uid="uid://dk0hakjnc17l4" path="res://Assets/Sprites/Characters/main/Vix Rocket 1 alt.png" id="17_g0mwx"]
+[ext_resource type="Texture2D" uid="uid://cxtg8uk0no1s5" path="res://Assets/Sprites/Characters/main/FX/JetFlameA 7.png" id="17_ynbwk"]
+[ext_resource type="Texture2D" uid="uid://cg38antwiir10" path="res://Assets/Sprites/Characters/main/FX/JetFlameA 8.png" id="18_fwo1p"]
+[ext_resource type="Texture2D" uid="uid://b3yktsjptkyql" path="res://Assets/Sprites/Characters/main/Vix Death 2 alt.png" id="18_uebyg"]
+[ext_resource type="Texture2D" uid="uid://cgnt28s2cbgmg" path="res://Assets/Sprites/Characters/main/Vix Death 2 alt 3.png" id="19_eatcd"]
+[ext_resource type="Texture2D" uid="uid://b4cfkt2orm54j" path="res://Assets/Sprites/Characters/main/Vix Death 3.png" id="20_jw7wm"]
+[ext_resource type="Texture2D" uid="uid://dxf8kbxvl207l" path="res://Assets/Sprites/Characters/main/Vix Idle.png" id="20_jx0fu"]
+[ext_resource type="Texture2D" uid="uid://ckh6h1rhi0dh4" path="res://Assets/Sprites/Characters/main/FX/HoverA 1.png" id="20_xa3d3"]
+[ext_resource type="Texture2D" uid="uid://bs3knc1eqglt7" path="res://Assets/Sprites/Characters/main/Vix Swing 2.png" id="21_hkihh"]
+[ext_resource type="Texture2D" uid="uid://dokdximwkv5hi" path="res://Assets/Sprites/Characters/main/FX/HoverA 2.png" id="21_w147y"]
+[ext_resource type="Texture2D" uid="uid://bg8v3sbqfeqvu" path="res://Assets/Sprites/Characters/main/FX/HoverA 3.png" id="22_nfcqw"]
+[ext_resource type="Texture2D" uid="uid://d3fhviqou5xxx" path="res://Assets/Sprites/Characters/main/FX/HoverA 4.png" id="23_765tm"]
+[ext_resource type="Texture2D" uid="uid://d1ppnqqqsykul" path="res://Assets/Sprites/Characters/main/Vix Swing 1 alt.png" id="23_t8dhp"]
+[ext_resource type="Texture2D" uid="uid://dq5ce4svwv8em" path="res://Assets/Sprites/Characters/main/FX/HoverA 5.png" id="24_n1vdr"]
+[ext_resource type="Texture2D" uid="uid://6l2dl8lmanfa" path="res://Assets/Sprites/Characters/main/Vix Swing 4.png" id="24_xqg34"]
+[ext_resource type="Texture2D" uid="uid://btik75p45iq6l" path="res://Assets/Sprites/Characters/main/FX/HoverA 6.png" id="25_4m6bv"]
+[ext_resource type="Texture2D" uid="uid://dxfmxbo6npx3d" path="res://Assets/Sprites/Characters/main/Vix Swing 5.png" id="25_x1t2k"]
+[ext_resource type="Texture2D" uid="uid://veofs2e42d53" path="res://Assets/Sprites/Characters/main/Vix Swing 6.png" id="26_c1len"]
+[ext_resource type="Texture2D" uid="uid://blyrwmle0v6xn" path="res://Assets/Sprites/Characters/main/FX/HoverA 7.png" id="26_o57oj"]
+[ext_resource type="Texture2D" uid="uid://c84xgoj1xayvv" path="res://Assets/Sprites/Characters/main/Vix Swing 13.png" id="27_ksf8s"]
+[ext_resource type="Texture2D" uid="uid://uxf3dx8kf68l" path="res://Assets/Sprites/Characters/main/Vix Swing 7.png" id="27_njbsy"]
+[ext_resource type="Texture2D" uid="uid://cgp11j15hymi0" path="res://Assets/Sprites/Characters/main/Vix Shoot 1.png" id="27_r4883"]
+[ext_resource type="Texture2D" uid="uid://12yuuyxx7vl4" path="res://Assets/Sprites/Characters/main/Vix Flip.png" id="28_2ugwf"]
+[ext_resource type="Texture2D" uid="uid://1d51xma2mt50" path="res://Assets/Sprites/Characters/main/Vix Shoot 1 alt.png" id="28_3xpxf"]
+[ext_resource type="Texture2D" uid="uid://cvfyv45a7ycd8" path="res://Assets/Sprites/Characters/main/Vix Swing 14.png" id="28_juygi"]
+[ext_resource type="Texture2D" uid="uid://dlqkru1gdei7m" path="res://Assets/Sprites/Characters/main/Vix Swing 8.png" id="28_pwbly"]
+[ext_resource type="Texture2D" uid="uid://teyyp7ixmlru" path="res://Assets/Sprites/Characters/main/Vix Flip Left 1.png" id="29_ppf8w"]
+[ext_resource type="Texture2D" uid="uid://dmtvelfnjry51" path="res://Assets/Sprites/Characters/main/Vix Shoot 2.png" id="29_sn47m"]
+[ext_resource type="Texture2D" uid="uid://vlnxibntqq4p" path="res://Assets/Sprites/Characters/main/Vix Swing 8 alt.png" id="29_wpola"]
+[ext_resource type="Texture2D" uid="uid://e5q0084wfbwj" path="res://Assets/Sprites/Characters/main/Vix.png" id="30_50dpj"]
+[ext_resource type="Texture2D" uid="uid://c6kyhwlu80snx" path="res://Assets/Sprites/Characters/main/Vix Flip Left 2.png" id="30_yy7ed"]
+[ext_resource type="Texture2D" uid="uid://buqhb4gtsabl4" path="res://Assets/Sprites/Characters/main/Vix Flip Left 3.png" id="31_5uuon"]
+[ext_resource type="Texture2D" uid="uid://cel2li7xcy2wh" path="res://Assets/Sprites/Characters/main/Vix Shoot 3.png" id="31_frh88"]
+[ext_resource type="Texture2D" uid="uid://bdx1r57r7xmmn" path="res://Assets/Sprites/Characters/main/Vix Swing 12.png" id="31_r4883"]
+[ext_resource type="Texture2D" uid="uid://hpqydyy8lk0n" path="res://Assets/Sprites/Characters/main/Vix Flip Left 4.png" id="32_2aa2c"]
+[ext_resource type="Texture2D" uid="uid://cyu652jq80ogf" path="res://Assets/Sprites/Characters/main/Vix Flip Left 5.png" id="33_qh3nh"]
+[ext_resource type="Texture2D" uid="uid://dk2mdwrry2r5l" path="res://Assets/Sprites/Characters/main/Vix Flip Left 6.png" id="34_hmirn"]
+[ext_resource type="Texture2D" uid="uid://1dyjck20irvp" path="res://Assets/Sprites/Characters/main/Vix Flip Left 7.png" id="35_o2cw2"]
+[ext_resource type="Texture2D" uid="uid://cdinmked1fnbp" path="res://Assets/Sprites/Characters/main/Vix Flip Right 1.png" id="36_3b0uk"]
+[ext_resource type="Texture2D" uid="uid://bs01kd8u6vs1v" path="res://Assets/Sprites/Characters/main/Vix Flip Right 2.png" id="37_uebyg"]
+[ext_resource type="Texture2D" uid="uid://xu2wqk2302js" path="res://Assets/Sprites/Characters/main/Vix Flip Right 3.png" id="38_eatcd"]
+[ext_resource type="Texture2D" uid="uid://d34p4r7cufk1m" path="res://Assets/Sprites/Characters/main/Vix Swing 16.png" id="39_3xpxf"]
+[ext_resource type="Texture2D" uid="uid://c3prwucc0suxb" path="res://Assets/Sprites/Characters/main/Vix Flip Right 4.png" id="39_jw7wm"]
+[ext_resource type="Texture2D" uid="uid://c3g20uwd6tk4c" path="res://Assets/Sprites/Characters/main/Vix Flip Right 5.png" id="40_asyxb"]
+[ext_resource type="Texture2D" uid="uid://dtbjybg00solt" path="res://Assets/Sprites/Characters/main/Vix Swing 17.png" id="40_sn47m"]
+[ext_resource type="Texture2D" uid="uid://cmb0rbv1g2071" path="res://Assets/Sprites/Characters/main/Vix Swing 21.png" id="41_50dpj"]
+[ext_resource type="Texture2D" uid="uid://txy3d643omeo" path="res://Assets/Sprites/Characters/main/Vix Flip Right 6.png" id="41_nwxor"]
+[ext_resource type="Texture2D" uid="uid://mldl1fv0uwuk" path="res://Assets/Sprites/Characters/main/Vix Swing 18.png" id="42_frh88"]
+[ext_resource type="Texture2D" uid="uid://b5hw1aa8e5sdi" path="res://Assets/Sprites/Characters/main/Vix Flip Right 7.png" id="42_kx0nl"]
+[ext_resource type="Texture2D" uid="uid://caqlho4e4eb4a" path="res://Assets/Sprites/Characters/main/Vix Swing 20.png" id="43_ooslm"]
+[ext_resource type="Texture2D" uid="uid://ddb6e3coxhctl" path="res://Assets/Sprites/Characters/main/Vix Swing 19.png" id="44_08kui"]
+[ext_resource type="Texture2D" uid="uid://b6p5ohxf3qso7" path="res://Assets/Sprites/Characters/main/Vix Swing 25.png" id="45_gbdhk"]
+[ext_resource type="Texture2D" uid="uid://c40cqj16lo3ix" path="res://Assets/Sprites/Characters/main/Vix Swing 24.png" id="46_7uq30"]
+[ext_resource type="Texture2D" uid="uid://beqi2l51f4rd5" path="res://Assets/Sprites/Characters/main/Vix Swing 23.png" id="47_l7cpx"]
+[ext_resource type="Texture2D" uid="uid://coevyh3uhrbsf" path="res://Assets/Sprites/Characters/main/Vix Swing 22.png" id="48_x5ooj"]
+[ext_resource type="Texture2D" uid="uid://cp8iu6po31fxk" path="res://Assets/Sprites/Characters/main/Vix Swing 22 alt.png" id="53_08kui"]
+[ext_resource type="Script" uid="uid://caluw0bqnslxt" path="res://Assets/Scripts/PlayerAudio.gd" id="65_tm1w5"]
+[ext_resource type="AudioStream" uid="uid://bjtn31hswieby" path="res://Assets/Audio/SFX/BlasterAFire1.ogg" id="66_5dnc3"]
+[ext_resource type="AudioStream" uid="uid://b77polmbm17pj" path="res://Assets/Audio/SFX/JetPackBoots.ogg" id="76_frh88"]
+[ext_resource type="AudioStream" uid="uid://c8v84y17tppkq" path="res://Assets/Audio/SFX/JetBootsHum.ogg" id="76_ooslm"]
+[ext_resource type="Texture2D" uid="uid://b345ef18i07b3" path="res://Assets/Sprites/Characters/main/Vix WallRun Left 1.png" id="79_mqen2"]
+[ext_resource type="Texture2D" uid="uid://ctbg76kqrroys" path="res://Assets/Sprites/Characters/main/Vix WallRun Left 2.png" id="80_q0y7r"]
+[ext_resource type="AudioStream" uid="uid://b0bqqiah4uata" path="res://Assets/Audio/SFX/dash3.wav" id="81_7uq30"]
+[ext_resource type="Texture2D" uid="uid://ddd4w1ft76hg7" path="res://Assets/Sprites/Characters/main/Vix WallRun Left 3.png" id="81_ba67i"]
+[ext_resource type="Texture2D" uid="uid://bpmwnuw0j3g74" path="res://Assets/Sprites/Characters/main/Vix WallRun Left 4.png" id="82_ugbnb"]
+[ext_resource type="Texture2D" uid="uid://dwdw72amf8fsi" path="res://Assets/Sprites/Characters/main/healthbar.png" id="82_x5ooj"]
+[ext_resource type="Texture2D" uid="uid://cyqelbwtw6muy" path="res://Assets/Sprites/Characters/main/Healthbar Fill.png" id="83_a51x6"]
+[ext_resource type="Texture2D" uid="uid://b4ljya5ugg1e7" path="res://Assets/Sprites/Characters/main/Vix WallRun Left 5.png" id="83_njfto"]
+[ext_resource type="Texture2D" uid="uid://jfg4qlu0r1dc" path="res://Assets/Sprites/Characters/main/Crosshair.png" id="84_a51x6"]
+[ext_resource type="Texture2D" uid="uid://dqo2ga6uigddx" path="res://Assets/Sprites/Characters/main/Vix WallRun Right 1.png" id="84_orkcy"]
+[ext_resource type="Texture2D" uid="uid://bdvfe2sf5yejt" path="res://Assets/Sprites/Characters/main/Vix WallRun Right 2.png" id="85_m8hkj"]
+[ext_resource type="Script" uid="uid://b0ucb12270ges" path="res://Assets/Prefabs/blockBox.gd" id="85_nfije"]
+[ext_resource type="Texture2D" uid="uid://m4vva3180ca8" path="res://Assets/Sprites/Characters/main/Vix WallRun Right 3.png" id="86_vt3x5"]
+[ext_resource type="Texture2D" uid="uid://b44uiwinukp1g" path="res://Assets/Sprites/Characters/main/Vix WallRun Right 4.png" id="87_dtwbh"]
+[ext_resource type="Texture2D" uid="uid://b34tel346s27i" path="res://Assets/Sprites/Characters/main/Vix WallRun Right 5.png" id="88_jx0a2"]
+[ext_resource type="AudioStream" uid="uid://b01n4lnyuxagv" path="res://Assets/Audio/VO/General/Death1.ogg" id="104_3b0uk"]
+[ext_resource type="AudioStream" uid="uid://c08r8ip34v275" path="res://Assets/Audio/VO/General/Hurt2.ogg" id="104_asyxb"]
+[ext_resource type="AudioStream" uid="uid://bsd6d376omah2" path="res://Assets/Audio/VO/General/Hurt3.ogg" id="105_nwxor"]
+[ext_resource type="AudioStream" uid="uid://dfjvwgq4qpbyo" path="res://Assets/Audio/VO/General/Hurt1.ogg" id="105_uebyg"]
+[ext_resource type="AudioStream" uid="uid://og5w1k4ptg82" path="res://Assets/Audio/VO/General/Hurt4.ogg" id="106_kx0nl"]
+[ext_resource type="AudioStream" uid="uid://dnbaee7sl2jb0" path="res://Assets/Audio/SFX/SaberSwingC.ogg" id="106_mqen2"]
+[ext_resource type="AudioStream" uid="uid://b40xaerymjy1r" path="res://Assets/Audio/SFX/SaberSwingD.ogg" id="107_q0y7r"]
+[ext_resource type="Texture2D" uid="uid://djssktctj8w5" path="res://Assets/Sprites/Characters/main/JetBoostBar.png" id="107_yy7ed"]
+[ext_resource type="Texture2D" uid="uid://bv2v324qhinca" path="res://Assets/Sprites/Characters/main/JetBoostFill.png" id="108_5uuon"]
+[ext_resource type="AudioStream" uid="uid://wmf07e76q50o" path="res://Assets/Audio/SFX/DeflectA.ogg" id="108_ba67i"]
+[ext_resource type="AudioStream" uid="uid://bvhm8l0iohgib" path="res://Assets/Audio/SFX/DeflectB.ogg" id="109_ugbnb"]
+[ext_resource type="AudioStream" uid="uid://eb8m518r53gu" path="res://Assets/Audio/SFX/Flip SFX.wav" id="109_w8ddc"]
+[ext_resource type="AudioStream" uid="uid://gjtf1c52nibd" path="res://Assets/Audio/SFX/SlamLand.wav" id="110_i6ex0"]
+[ext_resource type="AudioStream" uid="uid://cvvpj4qmrnua7" path="res://Assets/Audio/SFX/DeflectC.ogg" id="110_njfto"]
+[ext_resource type="AudioStream" uid="uid://lnphlw2n1yoc" path="res://Assets/Audio/SFX/Slam Start.wav" id="111_7s2cp"]
+[ext_resource type="AudioStream" uid="uid://blnw2xwk17k1h" path="res://Assets/Audio/SFX/SaberHumLoop.ogg" id="115_hl6q6"]
+[ext_resource type="Texture2D" uid="uid://ch1lrh8l8q63s" path="res://Assets/Sprites/Characters/main/Clear.png" id="121_icdhf"]
+[ext_resource type="AudioStream" uid="uid://djrhb56dyndf1" path="res://Assets/Audio/SFX/Heal.wav" id="121_q0y7r"]
+[ext_resource type="Texture2D" uid="uid://cvsqoe0pi6io7" path="res://Assets/Sprites/LevelTitle.png" id="122_7s2cp"]
+[ext_resource type="Texture2D" uid="uid://bl5eji7mhtsby" path="res://Assets/Sprites/FX/Slam Effect 1.png" id="122_i6ex0"]
+[ext_resource type="Texture2D" uid="uid://boedvu2dfu1qj" path="res://Assets/Sprites/FX/Slam Effect 2.png" id="123_w8ddc"]
+[ext_resource type="Texture2D" uid="uid://dtgyepibfbgq5" path="res://Assets/Sprites/FX/Slam Effect 3.png" id="124_7s2cp"]
+[ext_resource type="Texture2D" uid="uid://cyyhvce66xkxl" path="res://Assets/Sprites/FX/Slam Effect 4.png" id="125_tjfwm"]
+[ext_resource type="AudioStream" uid="uid://ueqv4enmlwvp" path="res://Assets/Audio/SFX/SaberSwingLargeAlt.ogg" id="125_wlu5f"]
+[ext_resource type="Texture2D" uid="uid://bpi0sg726wpm" path="res://Assets/Sprites/FX/Slam Effect 5.png" id="126_ltgrg"]
+[ext_resource type="Texture2D" uid="uid://u640pbkli228" path="res://Assets/Sprites/FX/Slam Effect 6.png" id="127_fmymb"]
+[ext_resource type="Texture2D" uid="uid://bwchn1gdmc6xd" path="res://Assets/Sprites/FX/Slam Effect 7.png" id="128_v2pao"]
+[ext_resource type="Texture2D" uid="uid://rt0m3gb4uafu" path="res://Assets/Sprites/FX/Slam Effect 8.png" id="129_jtdvi"]
+[ext_resource type="Texture2D" uid="uid://dr2n7cpxcae66" path="res://Assets/Sprites/FX/Slam Effect 9.png" id="130_yg87x"]
+[ext_resource type="Texture2D" uid="uid://drs5vs5h7flf7" path="res://Assets/Sprites/FX/Slam Effect 10.png" id="131_exvcc"]
+[ext_resource type="Texture2D" uid="uid://csp24y1yslfrl" path="res://Assets/Sprites/FX/Slam Effect 11.png" id="132_mfrmf"]
+[ext_resource type="Texture2D" uid="uid://7jbltrq3g28b" path="res://Assets/Sprites/FX/Slam Effect 12.png" id="133_hl6q6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_64e7q"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_2ugwf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_617b0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b60ru")
+}],
+"loop": true,
+"name": &"aim",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_s3rgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yguvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wjqlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_08dxu")
+}],
+"loop": true,
+"name": &"backward_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_eh2gh")
+}],
+"loop": true,
+"name": &"block",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_tm1w5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5dnc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_64a58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fucp3")
+}],
+"loop": true,
+"name": &"block_backwardwalk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_fucp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_64a58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5dnc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tm1w5")
+}],
+"loop": true,
+"name": &"block_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ixmbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hitn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ut1ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yalru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ut1ru")
+}],
+"loop": false,
+"name": &"boost",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_o2cw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3b0uk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uebyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_eatcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jw7wm")
+}],
+"loop": false,
+"name": &"death",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_hkihh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_njbsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_c1len")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_50dpj")
+}],
+"loop": false,
+"name": &"deflect_1",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_k3y5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_t8dhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hkihh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_sn47m")
+}],
+"loop": false,
+"name": &"deflect_2",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_g0mwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n2jod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g0mwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n2jod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g0mwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n2jod")
+}],
+"loop": false,
+"name": &"dodge_else",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_k3y5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_i4don")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k3y5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_i4don")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k3y5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_i4don")
+}],
+"loop": false,
+"name": &"dodge_forward",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_n1vdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4m6bv")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_2ugwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ppf8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yy7ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5uuon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_2aa2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_qh3nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_hmirn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_o2cw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_2ugwf")
+}],
+"loop": false,
+"name": &"flip_left",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_2ugwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_3b0uk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_uebyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_eatcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_jw7wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_asyxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nwxor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_kx0nl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_2ugwf")
+}],
+"loop": false,
+"name": &"flip_right",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_08dxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wjqlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yguvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s3rgb")
+}],
+"loop": true,
+"name": &"forward_walk",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ceerx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_o57oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_w147y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4m6bv")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_lfwng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ceerx")
+}],
+"loop": true,
+"name": &"rocket_aim",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0d33m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_oo7x4")
+}],
+"loop": true,
+"name": &"rocket_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_0i2kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_g0mwx")
+}],
+"loop": true,
+"name": &"rocket_rise",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_r4883")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3xpxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_sn47m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_50dpj")
+}],
+"loop": false,
+"name": &"shoot_1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_frh88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hkihh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_sn47m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_50dpj")
+}],
+"loop": true,
+"name": &"shoot_2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_xqg34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_x1t2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_c1len")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_50dpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_njbsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}],
+"loop": false,
+"name": &"slam",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_ksf8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_juygi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hkihh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_t8dhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_r4883")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jx0fu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ksf8s")
+}],
+"loop": false,
+"name": &"swing_1",
+"speed": 17.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_xqg34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_x1t2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_c1len")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_njbsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pwbly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wpola")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_50dpj")
+}],
+"loop": false,
+"name": &"swing_2",
+"speed": 17.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_r4883")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k3y5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_3xpxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_sn47m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_50dpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_juygi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_frh88")
+}],
+"loop": false,
+"name": &"swing_3",
+"speed": 17.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_sn47m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ooslm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_08kui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_gbdhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_7uq30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_l7cpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_50dpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_08kui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_x5ooj")
+}],
+"loop": false,
+"name": &"swing_4",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_ksf8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_sn47m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_50dpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_juygi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_t8dhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k3y5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_r4883")
+}],
+"loop": false,
+"name": &"swing_air",
+"speed": 17.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("79_mqen2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_q0y7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_ba67i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_ugbnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_njfto")
+}],
+"loop": true,
+"name": &"wallrun_left",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("84_orkcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_m8hkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_vt3x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_dtwbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_jx0a2")
+}],
+"loop": true,
+"name": &"wallrun_right",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xa3d3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_j8vfr")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_782qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_j8vfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ae12f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rw2bb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3wbp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_b6acd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ynbwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fwo1p")
+}],
+"loop": true,
+"name": &"on",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ceerx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_j8vfr")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_xa3d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_w147y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nfcqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_765tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_n1vdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4m6bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_o57oj")
+}],
+"loop": true,
+"name": &"on",
+"speed": 13.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_a51x6"]
+height = 4.0
+radius = 2.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a51x6"]
+size = Vector3(3, 1.7, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wlu5f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("121_icdhf")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("122_i6ex0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_w8ddc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_7s2cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_tjfwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_ltgrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_fmymb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_v2pao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_jtdvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_yg87x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_exvcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_mfrmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_hl6q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_icdhf")
+}],
+"loop": false,
+"name": &"impact",
+"speed": 36.0
+}]
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 581
+script = ExtResource("1_gyb0l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_64e7q")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.5)
+shape = SubResource("SeparationRayShape3D_2ugwf")
+
+[node name="PlayerSprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20933, 0)
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_617b0")
+animation = &"swing_4"
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.967871, -0.028292)
+spring_length = 1.5
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.47449)
+fov = 90.0
+near = 0.005
+
+[node name="RefPos" type="Node3D" parent="."]
+
+[node name="CamRight" type="Node3D" parent="RefPos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.767871, -0.328292)
+
+[node name="CamLeft" type="Node3D" parent="RefPos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.768, -0.328)
+
+[node name="CamMid" type="Node3D" parent="RefPos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0.8)
+
+[node name="FX" type="Node3D" parent="."]
+
+[node name="FlameBoots" type="AnimatedSprite3D" parent="FX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0145327, -1.50152, 0.0235231)
+flip_v = true
+pixel_size = 0.02
+alpha_cut = 3
+sprite_frames = SubResource("SpriteFrames_xa3d3")
+animation = &"off"
+autoplay = "off"
+
+[node name="RightBootHover" type="AnimatedSprite3D" parent="FX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.120609, -1.09592, -0.00604408)
+flip_v = true
+pixel_size = 0.015
+alpha_cut = 3
+sprite_frames = SubResource("SpriteFrames_ceerx")
+animation = &"off"
+autoplay = "off"
+frame_progress = 0.131904
+
+[node name="LeftBootHover" type="AnimatedSprite3D" parent="FX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.179177, -1.06503, -0.00604408)
+flip_v = true
+pixel_size = 0.015
+alpha_cut = 3
+sprite_frames = SubResource("SpriteFrames_ceerx")
+animation = &"off"
+autoplay = "off"
+frame_progress = 0.935623
+
+[node name="PlayerAudioManager" type="Node3D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("65_tm1w5")
+player = NodePath("..")
+swingSFX = Array[AudioStream]([ExtResource("106_mqen2"), ExtResource("107_q0y7r")])
+deflectSFX = Array[AudioStream]([ExtResource("108_ba67i"), ExtResource("109_ugbnb"), ExtResource("110_njfto")])
+hurtSFX = Array[AudioStream]([ExtResource("105_uebyg"), ExtResource("104_asyxb"), ExtResource("105_nwxor"), ExtResource("106_kx0nl")])
+
+[node name="SaberHum" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.2, 0)
+stream = ExtResource("115_hl6q6")
+volume_db = 1.0
+unit_size = 1.25
+max_db = 1.0
+autoplay = true
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="Death" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.2, 0)
+stream = ExtResource("104_3b0uk")
+volume_db = 1.0
+unit_size = 8.0
+max_db = 1.0
+max_distance = 80.0
+bus = &"VO"
+
+[node name="Hurt" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.2, 0)
+stream = ExtResource("105_uebyg")
+volume_db = 1.0
+unit_size = 8.0
+max_db = 1.0
+max_distance = 80.0
+bus = &"VO"
+
+[node name="Jump" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.9, 0)
+stream = ExtResource("109_w8ddc")
+volume_db = 1.0
+unit_size = 8.0
+max_db = 1.0
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="SlamLand" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.9, 0)
+stream = ExtResource("110_i6ex0")
+volume_db = 1.0
+unit_size = 3.0
+max_db = 1.0
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="Heal" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.9, 0)
+stream = ExtResource("121_q0y7r")
+unit_size = 3.0
+max_db = -5.0
+pitch_scale = 0.9
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="SlamStart" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.9, 0)
+stream = ExtResource("111_7s2cp")
+volume_db = 1.0
+unit_size = 3.0
+max_db = 1.0
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="JetBootsHum" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0897343, -1.11571, 0)
+stream = ExtResource("76_ooslm")
+unit_size = 3.0
+autoplay = true
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="JetBootsActivate" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0897343, -1.11571, 0)
+stream = ExtResource("76_frh88")
+unit_size = 2.0
+pitch_scale = 1.7
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="Blaster" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33187, 0.622832, -0.268741)
+stream = ExtResource("66_5dnc3")
+unit_size = 2.0
+pitch_scale = 1.35
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="SaberSwing" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33187, 0.622832, -0.268741)
+stream = ExtResource("106_mqen2")
+unit_size = 2.0
+pitch_scale = 1.35
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="SaberSwingBig" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.580526, 0.856962, -0.268741)
+stream = ExtResource("125_wlu5f")
+volume_db = 2.0
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="Dodge" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.580526, 0.856962, -0.268741)
+stream = ExtResource("81_7uq30")
+unit_size = 1.0
+pitch_scale = 1.5
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="Dodge2" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.580526, 0.856962, -0.268741)
+stream = ExtResource("81_7uq30")
+unit_size = 1.0
+pitch_scale = 1.5
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="Deflect" type="AudioStreamPlayer3D" parent="PlayerAudioManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.580526, 0.856962, -0.268741)
+stream = ExtResource("108_ba67i")
+unit_size = 1.0
+pitch_scale = 1.5
+max_distance = 80.0
+bus = &"SFX"
+
+[node name="Rays" type="Node3D" parent="."]
+
+[node name="DrivableCheck" type="RayCast3D" parent="Rays"]
+transform = Transform3D(1, 0, 0, 0, 0.994011, -0.109283, 0, 0.109283, 0.994011, 0, 0, 0)
+target_position = Vector3(0, 0, -2)
+collision_mask = 4
+hit_from_inside = true
+
+[node name="GroundNormalCheck" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, -1.2, 0)
+hit_from_inside = true
+
+[node name="WallrunRight" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, -0.8, 0)
+target_position = Vector3(0.75, 0, 0)
+hit_from_inside = true
+
+[node name="WallrunLeft" type="RayCast3D" parent="Rays"]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0, -0.8, 0)
+target_position = Vector3(-0.75, 0, 0)
+hit_from_inside = true
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="UI"]
+layout_mode = 1
+offset_right = 64.0
+offset_bottom = 40.0
+scale = Vector2(3.5, 3.5)
+value = 100.0
+rounded = true
+texture_under = ExtResource("82_x5ooj")
+texture_progress = ExtResource("83_a51x6")
+
+[node name="JetBoost" type="TextureProgressBar" parent="UI"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 64.0
+grow_vertical = 0
+pivot_offset = Vector2(0, 40)
+max_value = 200.0
+value = 200.0
+rounded = true
+fill_mode = 3
+texture_under = ExtResource("107_yy7ed")
+texture_progress = ExtResource("108_5uuon")
+
+[node name="crosshair" type="TextureRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 16)
+texture = ExtResource("84_a51x6")
+
+[node name="PlanetInfoIcon" type="TextureRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.0
+offset_bottom = 128.0
+grow_horizontal = 0
+texture = ExtResource("122_7s2cp")
+
+[node name="PlanetLabel" type="RichTextLabel" parent="UI/PlanetInfoIcon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "Nexus Trilla IX"
+scroll_active = false
+horizontal_alignment = 2
+
+[node name="BulletSpawnPos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.217966, 0.9, 0)
+
+[node name="HitboxSword" type="Area3D" parent="."]
+collision_layer = 16
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitboxSword"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.9)
+shape = SubResource("CylinderShape3D_a51x6")
+
+[node name="HitBoxBlock" type="Area3D" parent="." node_paths=PackedStringArray("playerAudio")]
+collision_layer = 32
+collision_mask = 8
+script = ExtResource("85_nfije")
+playerAudio = NodePath("../PlayerAudioManager")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBoxBlock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0.45, -0.9)
+shape = SubResource("BoxShape3D_a51x6")
+
+[node name="SlamImpact" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.87661, 0)
+pixel_size = 0.0625
+axis = 1
+sprite_frames = SubResource("SpriteFrames_wlu5f")
+animation = &"empty"
+autoplay = "empty"
+
+[connection signal="body_entered" from="HitboxSword" to="." method="_on_hitbox_sword_body_entered"]
+[connection signal="body_exited" from="HitboxSword" to="." method="_on_hitbox_sword_body_exited"]
